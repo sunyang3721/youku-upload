@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>JSON TEST</title>
+</head>
+<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+<body>
+<h2>JSON TEST</h2>
+<p>1 name:<span id="value1"></span>
+<p>2 name:<span id="value2"></span>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+			$.getJSON('https://openapi.youku.com/v2/videos/show_basic.json?client_id=69b6e122da21a2d5&video_url=http://v.youku.com/v_show/id_XNzE2ODIxNDg0.html',function(data){
+				$('#s').text(data.user.name);
+				});
+	});
+</script>
+<p id="s">ss</p>
+</body>
